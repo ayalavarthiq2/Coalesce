@@ -1,0 +1,94 @@
+steps:
+  HUB_CONTACT-c0f2f6fc-9078-40d3-a440-d37bdb88a106:
+    operation:
+      config:
+        disable_hwm: true
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TGT-VAULT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 750720ff-872c-44e5-8665-8b5bf27623c0
+              stepCounter: c0f2f6fc-9078-40d3-a440-d37bdb88a106
+            config:
+              is_Hub_hk: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HUB_CONTACT_HASH_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eba2a34b-c763-40c2-bf4c-c1b9a1d3aee6
+                    stepCounter: 337b3982-7611-46b9-b00d-f536b2d94899
+                transform: ""
+          - columnReference:
+              columnCounter: ae46166e-7b85-40ec-82ec-034acb117b76
+              stepCounter: c0f2f6fc-9078-40d3-a440-d37bdb88a106
+            dataType: VARCHAR(18)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CONTACT__C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 80fce2e2-f325-444c-862b-eb08c7a504e2
+                    stepCounter: 337b3982-7611-46b9-b00d-f536b2d94899
+                transform: ""
+          - columnReference:
+              columnCounter: 2c46fa7a-a1f6-4509-9648-18ab61103563
+              stepCounter: c0f2f6fc-9078-40d3-a440-d37bdb88a106
+            dataType: TIMESTAMP
+            description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e7823df0-a1c8-4d07-9bf4-0fb34caed3be
+                    stepCounter: 337b3982-7611-46b9-b00d-f536b2d94899
+                transform: ""
+          - columnReference:
+              columnCounter: c6936279-6d86-4666-8585-ce9b2578e895
+              stepCounter: c0f2f6fc-9078-40d3-a440-d37bdb88a106
+            dataType: STRING
+            description: The Record Source (RSRC) describes the source of this data.
+            hashColumns: []
+            hashDetails: null
+            name: RSRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dfba47e8-9d74-43fd-938f-bcd1bdf10fcc
+                    stepCounter: 337b3982-7611-46b9-b00d-f536b2d94899
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TGT-STAGE
+                nodeName: DVSTG_LEAD
+            join:
+              joinCondition: FROM {{ ref('TGT-STAGE', 'DVSTG_LEAD') }} "DVSTG_LEAD"
+            name: HUB_CONTACT
+            noLinkRefs: []
+      name: HUB_CONTACT
+      overrideSQL: false
+      schema: ""
+      sqlType: "1"
+      type: sql
+    stepCounter: c0f2f6fc-9078-40d3-a440-d37bdb88a106

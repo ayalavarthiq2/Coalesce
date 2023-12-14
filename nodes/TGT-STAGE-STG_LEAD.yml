@@ -1,0 +1,309 @@
+steps:
+  STG_LEAD-b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: SALESFORCE LEAD STAGE
+      isMultisource: false
+      locationName: TGT-STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2fe52b33-b5f2-4bf3-9dea-3600463e675a
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b3676d4d-0bc0-45af-a941-2e3c6ec58e54
+                    stepCounter: 643b38be-4cd7-4306-92d8-b5c85611847e
+                transform: ""
+          - columnReference:
+              columnCounter: fc39ca1c-feeb-4c3f-9e11-8bff1fa71b63
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: FUNNEL_STATUS__C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3b5b4e1-c6b9-48c9-8a93-862e2eadd364
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: 488e9038-6a14-41ff-93a5-0e05e627f19d
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: LASTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0ea8224e-d41e-4534-bb93-98befe969f16
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: UPPER("SATV1_LEAD"."LASTNAME")
+          - columnReference:
+              columnCounter: c22b6252-22fa-45ae-ad03-ae7e0d85974f
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: FIRSTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5c55e1c2-4a93-46a3-9d8b-e4b6bcedfc3a
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: UPPER("SATV1_LEAD"."FIRSTNAME")
+          - columnReference:
+              columnCounter: b524c44d-03e4-46c5-9edb-7d052c1562c4
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: SALUTATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f670bf9d-fe90-40f1-be39-7b69b8bb895e
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: NVL("SATV1_LEAD"."SALUTATION",'NA')
+          - columnReference:
+              columnCounter: ed4bf38f-8ce1-42dd-92e6-b7b29ba905bc
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: NAME
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c34d1d90-0cfe-487f-8069-4d28999c0fb2
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: 3fe31b83-ce65-44d4-afa6-cb2b76829c30
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: RECORDTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ae30e7a-98a3-43b2-a203-ac04380b56a9
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: 280b0853-cf23-4967-ac1c-d096142c84ad
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5a547e88-9baa-4293-99f7-37311ffae239
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: 6888a152-3736-4234-bf57-f646cb37ff27
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e1ff1fb3-23db-4fb4-94c8-b91995be67ca
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: 9eccda8a-b2ec-4870-a972-1e4fc1601af9
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: STREET
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b8f93301-b955-4b9f-b77a-ec9022086644
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: ad65dafb-4ed6-4620-9f60-6588c8d61552
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 522881f1-43df-4702-99bb-529d4331645a
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: 8e99d5e8-9f62-4c81-83c6-59875e49ea09
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 706fd75d-3927-4c2c-a22b-8d4f76e8aa58
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: 90e51ae8-7d1d-468b-bb84-efcf82549577
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: POSTALCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 375532f8-d066-4740-b186-39662fdff80c
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: 5005acf0-a8c1-45fe-977c-fb75c05a2806
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c882b34e-ba25-469d-9fe0-7982ed8049aa
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: 0df2f92b-8f87-44f8-81b8-87c3a5174278
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: NUMBER(18,15)
+            description: ""
+            name: LATITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 988fbc7f-e4d3-4e7c-afba-e33dffee3a6d
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: c995062c-9554-4a64-bba8-c6c265bd2638
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: NUMBER(18,15)
+            description: ""
+            name: LONGITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 55d25e55-e011-4b0f-bbc0-1f3a6640ff8c
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: cb197c72-e6ec-42e8-bcb2-049d975b3175
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: GEOCODEACCURACY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c0753cd6-5891-403d-945e-f0673bb74d72
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: 9fcea84e-08cc-4b69-9077-dff2e6afe617
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dffca0f1-96a2-4f98-afc9-73f8614ff403
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: 9a04247e-b0b3-47fb-97ee-ba21a71cf410
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: MOBILEPHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1bc29ab0-0142-46bc-87df-f668233e62ac
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: c58f1429-1186-41dd-b419-ac02498e1c2d
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: FAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e64ece48-ed99-4b01-a945-4892059a27f3
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: fc0028b0-78b1-421a-966f-664b88bb02be
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fd8e1ee6-c1f9-4f7f-b7bc-fa0bda848def
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+          - columnReference:
+              columnCounter: c3951535-d828-49fb-bef5-6f985c765a01
+              stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
+            dataType: STRING
+            description: ""
+            name: WEBSITE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 28d06778-8c80-45a5-8e3f-636a71fb610b
+                    stepCounter: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              HUB_LEAD: 643b38be-4cd7-4306-92d8-b5c85611847e
+              SATV1_LEAD: 1e9f1988-30ed-404a-ba9a-9db091efeb64
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TGT-VAULT
+                nodeName: HUB_LEAD
+              - locationName: TGT-VAULT
+                nodeName: SATV1_LEAD
+            join:
+              joinCondition: |
+                FROM {{ ref('TGT-VAULT', 'HUB_LEAD') }} "HUB_LEAD"
+                INNER JOIN {{ ref('TGT-VAULT', 'SATV1_LEAD') }} "SATV1_LEAD"
+                ON "HUB_LEAD"."HUB_LEAD_HASH_KEY" = "SATV1_LEAD"."HUB_LEAD_HASH_KEY"
+                WHERE "SATV1_LEAD"."FUNNEL_STATUS__C" = 'Marketing Target'
+            name: STG_LEAD
+            noLinkRefs: []
+      name: STG_LEAD
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: b2e0d1e9-007d-4fc5-beda-00e8a1fd3e0a
