@@ -1,6 +1,13 @@
 defaultStorageMapping: TGT-STAGE
 installedPackages: {}
-jobs: {}
+jobs:
+  Job-1:
+    excludeSelector: ""
+    id: 1
+    includeSelector: "+{ location: TGT-INFOMART name: DIM_LEAD }"
+    name: Dim_Lead
+    steps: []
+    subgraphs: []
 locations:
   SRC-NETSUITE:
     mappingDefinitions:
