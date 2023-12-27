@@ -1,0 +1,128 @@
+steps:
+  FCT_OPPORTUNITYLINEITEM1-6f4df3e7-09aa-412f-b28f-9f0bd0af6759:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TGT-INFOMART
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: cc58b71d-9591-4374-8797-98b8f36e4400
+              stepCounter: 6f4df3e7-09aa-412f-b28f-9f0bd0af6759
+            dataType: VARCHAR(18)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3331dd8b-3372-42ca-93f0-2b38213caa7a
+                    stepCounter: 6f7fe529-c9e7-4057-bf29-74507ee52cd9
+                transform: ""
+          - columnReference:
+              columnCounter: b5cd9d81-8230-4cfc-9e35-f5f5899ee047
+              stepCounter: 6f4df3e7-09aa-412f-b28f-9f0bd0af6759
+            dataType: VARCHAR(18)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: OPPORTUNITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 942d4c33-277b-44c4-ae55-1d44cab6c3c6
+                    stepCounter: 6f7fe529-c9e7-4057-bf29-74507ee52cd9
+                transform: ""
+          - columnReference:
+              columnCounter: a94bf615-4ede-4c44-afac-8f5a33c5c333
+              stepCounter: 6f4df3e7-09aa-412f-b28f-9f0bd0af6759
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTALPRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59245a88-bddd-4523-8740-9e27be7d13ae
+                    stepCounter: 6f7fe529-c9e7-4057-bf29-74507ee52cd9
+                transform: ""
+          - columnReference:
+              columnCounter: 9191c2c8-7de3-470f-8891-4aeaeaa32989
+              stepCounter: 6f4df3e7-09aa-412f-b28f-9f0bd0af6759
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_OPPORTUNITY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be6003bb-6aba-45cf-9091-371b537ae8d1
+                    stepCounter: 6f7fe529-c9e7-4057-bf29-74507ee52cd9
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f3f0b8ab-d74a-4fa5-a61b-da12be02da44
+              stepCounter: 6f4df3e7-09aa-412f-b28f-9f0bd0af6759
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 395ed60e-1b88-4511-b513-fa6315ed6749
+              stepCounter: 6f4df3e7-09aa-412f-b28f-9f0bd0af6759
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TGT-STAGE
+                nodeName: STG_OPPORTUNITYLINEITEM1
+            join:
+              joinCondition: FROM {{ ref('TGT-STAGE', 'STG_OPPORTUNITYLINEITEM1') }} "STG_OPPORTUNITYLINEITEM1"
+            name: FCT_OPPORTUNITYLINEITEM1
+            noLinkRefs: []
+      name: FCT_OPPORTUNITYLINEITEM1
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: 6f4df3e7-09aa-412f-b28f-9f0bd0af6759

@@ -1,0 +1,98 @@
+steps:
+  STG_OPPORTUNITYLINEITEM1-6f7fe529-c9e7-4057-bf29-74507ee52cd9:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TGT-STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 3331dd8b-3372-42ca-93f0-2b38213caa7a
+              stepCounter: 6f7fe529-c9e7-4057-bf29-74507ee52cd9
+            dataType: VARCHAR(18)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96049c41-98f0-4d0e-8b0e-a7b0c9c174f5
+                    stepCounter: 199d241d-2abb-4d44-a90b-778189ca189a
+                transform: ""
+          - columnReference:
+              columnCounter: 942d4c33-277b-44c4-ae55-1d44cab6c3c6
+              stepCounter: 6f7fe529-c9e7-4057-bf29-74507ee52cd9
+            dataType: VARCHAR(18)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: OPPORTUNITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1b8770d3-45a7-41e5-b960-47c897ec154c
+                    stepCounter: 199d241d-2abb-4d44-a90b-778189ca189a
+                transform: ""
+          - columnReference:
+              columnCounter: 59245a88-bddd-4523-8740-9e27be7d13ae
+              stepCounter: 6f7fe529-c9e7-4057-bf29-74507ee52cd9
+            dataType: NUMBER(18,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTALPRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57721ca5-ccf0-49ea-8e45-68e772d5f285
+                    stepCounter: 199d241d-2abb-4d44-a90b-778189ca189a
+                transform: ""
+          - columnReference:
+              columnCounter: be6003bb-6aba-45cf-9091-371b537ae8d1
+              stepCounter: 6f7fe529-c9e7-4057-bf29-74507ee52cd9
+            dataType: NUMBER
+            description: ""
+            name: DIM_OPPORTUNITY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d38e0e4-2bb0-4e5b-a0b2-6478f16ecd7b
+                    stepCounter: 8aa228ba-9994-4d5a-ad99-b042775d1b91
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              DIM_OPPORTUNITY: 8aa228ba-9994-4d5a-ad99-b042775d1b91
+              OPPORTUNITYLINEITEM: 199d241d-2abb-4d44-a90b-778189ca189a
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC-SDFC
+                nodeName: OPPORTUNITYLINEITEM
+              - locationName: TGT-INFOMART
+                nodeName: DIM_OPPORTUNITY
+            join:
+              joinCondition: |-
+                FROM {{ ref('SRC-SDFC', 'OPPORTUNITYLINEITEM') }} "OPPORTUNITYLINEITEM"
+                LEFT JOIN {{ ref('TGT-INFOMART', 'DIM_OPPORTUNITY') }} "DIM_OPPORTUNITY"
+                ON "OPPORTUNITYLINEITEM"."OPPORTUNITYID" = "DIM_OPPORTUNITY"."ID"
+            name: STG_OPPORTUNITYLINEITEM1
+            noLinkRefs: []
+      name: STG_OPPORTUNITYLINEITEM1
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 6f7fe529-c9e7-4057-bf29-74507ee52cd9

@@ -2,6 +2,11 @@ defaultStorageMapping: TGT-STAGE
 installedPackages: {}
 jobs: {}
 locations:
+  SRC-NETSUITE:
+    mappingDefinitions:
+      "2":
+        database: Q2_ODS_QA
+        schema: NETSUITE
   SRC-SDFC:
     mappingDefinitions:
       "2":
